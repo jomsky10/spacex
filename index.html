@@ -3,7 +3,7 @@
 <head>
 
     <title>SpaceX</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="style.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./twitter-feed.css" />
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>  
@@ -751,9 +751,8 @@
 
 <script type="text/javascript"> // ONLOAD PRELOADER
     $(window).load(function() {
-        $(".loader").fadeOut("slow");
+        $(".loader").delay(350).fadeOut("slow");
         $(".fullscreen-bg__video").get(0).play();
-      
 
     });
     </script>
