@@ -99,7 +99,7 @@
   
             <div class="fullscreen-bg_cover">
                 <div class="fullscreen-bg">
-                        <video class="fullscreen-bg__video" height="100%" muted preload="4">
+                        <video class="fullscreen-bg__video" height="100%" muted preload="none">
                             <source src="./src/spacex.mp4" type="video/mp4">
                         </video>
                 </div>
@@ -673,7 +673,6 @@
  
 
 
-
 <script type="text/javascript"> //LOAD MORE
       $(document).ready(function() {
         $('.fullscreen-bg__video').bind('ended',function (){
@@ -712,38 +711,7 @@
 
 
 <script type="text/javascript"> // SECTION-1 HOVER
-    // $(document).ready(function() {
-    //     var movementStrength = 40;
-    //     var height = movementStrength / $(window).height();
-    //     var width = movementStrength / $(window).width();
-    //     $(".bg").mousemove(function(e){
-    //               var pageX = e.pageX - ($(window).width() / 2);
-    //               var pageY = e.pageY - ($(window).height() / 2);
-    //               var newvalueX = width * pageX * -1 - 25;
-    //               var newvalueY = height * pageY * -1 - 50;
-    //               $('.bg').css("background-position", newvalueX+"px     "+newvalueY+"px");
-    //     });
-
-    //     $("#section-3 .column #col2").mousemove(function(e){
-    //               var pageX = e.pageX - ($(window).width() / 2);
-    //               var pageY = e.pageY - ($(window).height() / 2);
-    //               var newvalueX = width * pageX * -1 - 25;
-    //               var newvalueY = height * pageY * -1 - 50;
-    //               $('#section-3 .column #col2').css("background-position", newvalueX+"px     "+newvalueY+"px");
-    //     });
-
-    //     // $("body").mousemove(function(e){
-    //     //           var pageX = e.pageX - ($(window).width() / 2);
-    //     //           var pageY = e.pageY - ($(window).height() / 2);
-    //     //           var newvalueX = width * pageX * -1 - 25;
-    //     //           var newvalueY = height * pageY * -1 - 50;
-    //     //           $('body').css("background-position", newvalueX+"px     "+newvalueY+"px");
-    //     // });
-
-
-    //     });
-
-
+  
         var lFollowX = 0,
                 lFollowY = 0,
                 x = 0,
@@ -783,12 +751,11 @@
 
 <script type="text/javascript"> // ONLOAD PRELOADER
     $(window).load(function() {
+        $(".loader").delay(350).fadeOut("slow");
         $(".fullscreen-bg__video").get(0).play();
-        $(".loader").fadeOut("slow");
 
     });
     </script>
-
 
 
 
