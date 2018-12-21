@@ -51,7 +51,7 @@
                                     <li>About</li>
                                     <li>SpaceX Audiences</li>
                                     <li>Log in</li>
-                                </ul>
+                            </ul>
                  </div>
                     <span class="burger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
@@ -77,10 +77,9 @@
                             <li class="nav-li"><a href="#">About</a></li>
                             <li class="nav-li"><a href="#">Downloads</a></li>
                             <li class="nav-li"><a href="#">SpaceX Audiences</a></li>
-                            <button href="#" class="btn"><span>Log In</span></button>
+                         <a href="login.html"> <button class="btn"><span>Log In</span></button></a>  
 
                             <!-- <li><a href="#"></a>Log in</a></li> -->
-
                             <!-- <li class="item">Missions</li>
                             <li class="item">Galleries</li>
                             <li class="item">SpaceX TV</li>
@@ -99,7 +98,7 @@
   
             <div class="fullscreen-bg_cover">
                 <div class="fullscreen-bg">
-                        <video class="fullscreen-bg__video" height="100%" muted preload="none">
+                        <video class="fullscreen-bg__video" height="100%" muted preload="4">
                             <source src="./src/spacex.mp4" type="video/mp4">
                         </video>
                 </div>
@@ -170,7 +169,7 @@
 
 
 
-<div id="body-wrapper">
+<div class="section" id="body-wrapper">
     <div class="section" id="section-2">
         <div class="section-2-content">
             <div class="section-2-intro">
@@ -425,14 +424,14 @@
                 
                 <!-- Twitter Emebed -->
 
-            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <!-- <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             <a class="twitter-timeline" href="https://twitter.com/spacex" data-widget-id="<YOUR ID>" 
                 data-theme="dark" data-link-color="#000" data-chrome="noheader nofooter noborders transparent"  
                 data-related="twitterapi,twitter"  data-aria-polite="assertive" width="100%" height="100%" lang="EN">
                 Tweets by @SpaceX</a>
 
 
-
+ -->
 
 
 
@@ -636,7 +635,6 @@
 <script type="text/javascript"> // TYPEWRITER
 
     new TypeIt('#typed', {
- 
      speed: 70,
      loop: true,
      loopDelay: 1,
@@ -669,8 +667,9 @@
      .pause(2100).empty().type('Of Course I Still Love You')
      ;
    
-     </script>
+</script>
  
+
 
 
 <script type="text/javascript"> //LOAD MORE
@@ -683,9 +682,9 @@
     </script>
 
 
-<script type="text/javascript">
+<script type="text/javascript"> //LOAD MORE
   
-    $(".button").on('click', function (e) {
+    $(".button").on('click', function (e) { 
         e.preventDefault();
         $("#loadme").slice(0, 1).show();
         $(".hide").slice(0, 2).slideDown();
@@ -700,19 +699,19 @@
 </script>
 
 
-<script type="text/javascript"> //LOAD MORE
+<script type="text/javascript"> //VIDEO MODAL
       $(document).ready(function() {
         new ModalVideo('.play');
   });
     
-    </script>
+ </script>
 
 
 
 
 <script type="text/javascript"> // SECTION-1 HOVER
   
-        var lFollowX = 0,
+          var lFollowX = 0,
                 lFollowY = 0,
                 x = 0,
                 y = 0,
@@ -744,21 +743,19 @@
 
             moveBackground();
 
-
     </script>
-
 
 
 <script type="text/javascript"> // ONLOAD PRELOADER
-    $(window).load(function() {
+    $(window, ".fullscreen-bg__video").load(function() {
         $(".loader").delay(2500).fadeOut("slow");
-        setTimeout(function() {
+        // $(".fullscreen-bg__video").get(0).play();
+            setTimeout(function() {
           $(".fullscreen-bg__video").get(0).play();
-        }, 2700);
+        }, 2500);
 
     });
     </script>
-
 
 
 </body>
