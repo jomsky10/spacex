@@ -751,8 +751,10 @@
 
 <script type="text/javascript"> // ONLOAD PRELOADER
     $(window).load(function() {
-        $(".loader").delay(350).fadeOut("slow");
-        $(".fullscreen-bg__video").get(0).play();
+        $(".loader").delay(2500).fadeOut("slow");
+        setTimeout(function() {
+          $(".fullscreen-bg__video").get(0).play();
+        }, 2500);
 
     });
     </script>
