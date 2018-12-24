@@ -75,7 +75,6 @@
                             <li class="nav-li"><a href="#">Follow SpaceX</a></li>
                             <li class="nav-li"><a href="#">Downloads</a></li>
                             <li class="nav-li"><a href="#">About</a></li>
-                            <li class="nav-li"><a href="#">Downloads</a></li>
                             <li class="nav-li"><a href="#">SpaceX Audiences</a></li>
                          <a href="login.html"> <button class="btn"><span>Log In</span></button></a>  
 
@@ -169,7 +168,7 @@
 
 
 
-<div class="section" id="body-wrapper">
+<div id="body-wrapper">
     <div class="section" id="section-2">
         <div class="section-2-content">
             <div class="section-2-intro">
@@ -413,6 +412,7 @@
             <div class="button-container">
                 <button href="#" class="button" >LOAD MORE</button>
             </div>
+            
        </div>  
     </div>
     <!-- END OF SECTION 2  -->
@@ -609,9 +609,13 @@
         </div>
 
     </div>
+<!-- 
+    <iframe src="./src/sunflower.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
 
- 
-
+      <audio id="player" autoplay>
+        <source src="./src/sunflower.mp3" type="audio/mp3">
+    </audio>
+ -->
 
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
@@ -711,7 +715,39 @@
 
 <script type="text/javascript"> // SECTION-1 HOVER
   
-          var lFollowX = 0,
+    // $(document).ready(function() {
+    //     var movementStrength = 40;
+    //     var height = movementStrength / $(window).height();
+    //     var width = movementStrength / $(window).width();
+    //     $(".bg").mousemove(function(e){
+    //               var pageX = e.pageX - ($(window).width() / 2);
+    //               var pageY = e.pageY - ($(window).height() / 2);
+    //               var newvalueX = width * pageX * -1 - 25;
+    //               var newvalueY = height * pageY * -1 - 50;
+    //               $('.bg').css("background-position", newvalueX+"px     "+newvalueY+"px");
+    //     });
+
+    //     $("#section-3 .column #col2").mousemove(function(e){
+    //               var pageX = e.pageX - ($(window).width() / 2);
+    //               var pageY = e.pageY - ($(window).height() / 2);
+    //               var newvalueX = width * pageX * -1 - 25;
+    //               var newvalueY = height * pageY * -1 - 50;
+    //               $('#section-3 .column #col2').css("background-position", newvalueX+"px     "+newvalueY+"px");
+    //     });
+
+    //     // $("body").mousemove(function(e){
+    //     //           var pageX = e.pageX - ($(window).width() / 2);
+    //     //           var pageY = e.pageY - ($(window).height() / 2);
+    //     //           var newvalueX = width * pageX * -1 - 25;
+    //     //           var newvalueY = height * pageY * -1 - 50;
+    //     //           $('body').css("background-position", newvalueX+"px     "+newvalueY+"px");
+    //     // });
+
+
+    //     });
+
+
+        var lFollowX = 0,
                 lFollowY = 0,
                 x = 0,
                 y = 0,
@@ -743,20 +779,23 @@
 
             moveBackground();
 
+
     </script>
 
 
+
 <script type="text/javascript"> // ONLOAD PRELOADER
-    $(window, ".fullscreen-bg__video").load(function() {
+      $(window, ".fullscreen-bg__video", ".audio").load(function() {
         setTimeout(function() {
           $(".fullscreen-bg__video").get(0).play();
         }, 2500);
         $(".loader").delay(2500).fadeOut("slow");
         // $(".fullscreen-bg__video").get(0).play();
 
-
     });
     </script>
+
+
 
 
 </body>

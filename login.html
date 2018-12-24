@@ -3,30 +3,40 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Portal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.min.css" />
+
+    <script type="text/javascript" src="./js/type.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
 </head>
 <body>
     
+
+<div class="loader" style="border-radius: 0px;">   </div>
+
 <div class="section-login">
     <div class="login-wrapper">
             <div class="col" id="col1">
-
+                <div class="type">
+                     <p id="typed-login">Welcome to the SpaceX Authentication Portal</p>
+                </div>
+                <div class="col-bg">
+    
+                </div>
             </div>
             <div class="col" id="col2">
-
                 <div class="login-form">
                     <img src="./src/spacex-login.png">
                     <form >
                         <fieldset>
-                            <input type="email" id="email" placeholder="Email Address"> <br>
-                            <input type="password" id="password" placeholder="Password"> <br>
+                            <input type="text" id="id" placeholder="Employee ID" required> <br>
+                            <input type="password" id="password" placeholder="Password" required> <br>
                             <input type="submit" class="btn" value="LOGIN">
                          </fieldset>
                     </form>
-
-
                 </div>
 
             </div>
@@ -35,6 +45,55 @@
     </div>
 </div>
 
+
+<script type="text/javascript">
+
+        var lFollowX = 0,
+        lFollowY = 0,
+        x = 0,
+        y = 0,
+        friction = 1 / 30;
+
+        function moveBackground() {
+        x += (lFollowX - x) * friction;
+        y += (lFollowY - y) * friction;
+
+        translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+        $('.col-bg').css({
+        '-webit-transform': translate,
+        '-moz-transform': translate,
+        'transform': translate
+        });
+
+        window.requestAnimationFrame(moveBackground);
+        }
+        $(window).on('mousemove click', function(e) {
+        var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+        var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+        lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+        lFollowY = (10 * lMouseY) / 100;
+        });
+        moveBackground();
+
+</script>
+
+<script type="text/javascript"> // TYPEWRITER
+
+    new TypeIt('#typed-login', {
+    speed: 75,
+    cursor: false,
+    startDelay: 900
+    });
+
+</script>
+ 
+
+ <script type="text/javascript"> // ONLOAD PRELOADER
+    $(window).load(function() {
+      $(".loader").fadeOut("slow");
+  });
+  </script>
 
 
 </body>
