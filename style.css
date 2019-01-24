@@ -112,7 +112,7 @@ h2, h3 {
 }
 
 body {
-  background: url(./src/main-bg.jpg) repeat-x bottom;
+  background: #000 url(./src/main-bg.jpg) repeat-x bottom;
   background-size: 105%;
   overflow-x: hidden;
 }
